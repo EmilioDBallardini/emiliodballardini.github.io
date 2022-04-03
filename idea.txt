@@ -1,0 +1,17 @@
+conceptos en globos, que se expanden al hacer hover
+navbar con una fotito o logito que se expande y todo lo de atras se blurea
+fondo con unas "burbujas" 
+colores azulados mar, un verdecito está bien, algun color blanco claro
+bonus:
+que las burbujas se muevan
+
+
+--------
+
+blanco y negro
+cajones y lineas en diagonales
+
+header: mi foto y los sectores en la navbar (fija, acompaña el recorrido)
+tittle: abajo quién soy
+my-projects: los proyectos son anchors a otras secciones en donde se explica mejor que se hizo, con que y en que tiempo
+contact: debajo del resúmen, con imágenes

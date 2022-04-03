@@ -3,10 +3,12 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   --transition-speed: 600ms;
+  --pads-color: #000000;
+  --central-color: rgb(255, 255, 255);
 }
 
 .portfolio_body {
-  background-color: rgb(139, 114, 150);
+  background-color: var(--central-color);
   margin: 0;
   padding: 0;
   position: relative;
@@ -14,7 +16,7 @@
 
 .nav_pad {
   padding: 1.25rem;
-  background-color: #694ba1;
+  background-color: #3d3c3f;
 }
 
 .nav_links {
@@ -65,7 +67,90 @@
   transition: var(--transition-speed);
 }
 
-.nav_name{
+.nav_name {
   cursor: pointer;
   margin-right: auto;
+}
+
+.color_name {
+  color: #0c417e;
+}
+
+.footer_pad {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--pads-color);
+}
+
+.foot_pad {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #3d3c3f;
+}
+
+.foot_links {
+  margin: 0;
+  height: auto;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 2%;
+  clear: both;
+}
+
+.foot_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.foot_links li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+.foot_links li a:hover {
+  background-color: #0c417e;
+  border-radius: 0.20rem;
+}
+
+.foot_links button {
+  padding: 9px 25px;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.foot_links button:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.20rem;
+}
+
+.foot_item {
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%) opacity(0.6);
+  transition: var(--transition-speed);
+}
+
+.foot_name {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.image__bici {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+  object-position: -40px 20px;
+  opacity: 80%;
 }
