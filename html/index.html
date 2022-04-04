@@ -10,17 +10,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="portfolio_body">
   <div id="container">
 
     <header>
-
-      <button class="nav-toggle" aria-label="toggle navigation bar">
-        <span class="chori"></span>
-      </button>
-
       <nav class="nav_pad">
         <ul class="nav_links">
           <li class="nav_item nav_name"><a>Hi! I'm Emilio Ballardini</a></li>
@@ -32,22 +31,26 @@
         </ul>
       </nav>
     </header>
-
+    
+    <button class="nav-toggle" aria-label="toggle navigation bar">
+      <span class="chori"></span>
+    </button>
+    
     <!--------------------------------------------------------------------------------------------------------------------->
     <!-- Introduction -->
-    <section class="section-main" id="home">
-      <h1 class="section-title section-title-intro">Hi! I'm <strong> Emilio Ballardini </strong></h1>
-      <p class="section-subtitle section-subtitle-intro">
+    <section class="section__main" id="home">
+      <h1 class="section__title section__title-intro">Hi! I'm <strong> Emilio Ballardini </strong></h1>
+      <p class="section__subtitle section__subtitle-intro">
         Hi! I'm <span class="color_name">Emilio</span>, also called <span class="color_name">Emi</span>, sometimes
         known as <span class="color_name">Qudit</span> (kju dit) and you've trasspased into my domains<br>
         I'm a fullstack RoR developer<br>
       </p>
-      <img src="../images/foto__pared.jpeg" alt="an image of me smiling i hope" class="image__bici">
+      <img src="../images/foto__pared.jpeg" alt="an image of me smiling i hope" class="image__museum">
     </section>
 
     <!-- My project -->
     <section class="my-projects" id="projects">
-      <h2 class="section-title section-title-projects"> What i've done </h2>
+      <h2 class="section__title section__title-projects"> What i've done </h2>
       <div class="projects">
         <div class="project">
           <h3>Albores</h3>
@@ -75,19 +78,21 @@
 
     <!-- About me -->
     <section class="about-me" id="about">
-      <h2 class="section-title section-title-about"></h2>
-      <p class="section-subtitle section-subtitle-about"></p>
+      <h2 class="section__title section__title-about"></h2>
+      <p class="section__subtitle section__subtitle-about"></p>
 
       <div class="about__body">
         <p></p>
       </div>
 
-      <img src="../images/foto__bici.jpeg" alt="an image of me smiling i hope" class="image__bici">
+      <img src="../images/emi__1.jpeg" alt="an image of me smiling i hope" class="image__museum">
     </section>
 
+    <!-- Projects -->
+
     <section class="my-work" id="work">
-      <h2 class="section-title">My work</h2>
-      <p class="section-subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius veritatis quasi
+      <h2 class="section__title">My work</h2>
+      <p class="section__subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius veritatis quasi
         accusantium nesciunt officia consequatur autem cupiditate animi excepturi quas repellendus placeat nemo
         consequuntur sequi, est hic explicabo recusandae.</p>
 
@@ -106,6 +111,7 @@
       </div>
     </section>
 
+    <!-- Footer -->
 
     <footer>
       <a href="mailto:emilio.ballardini@alu.ing.unlp.edu.ar"
@@ -120,6 +126,7 @@
       </ul>
     </footer>
 
+    <!-- Scripts -->
     <script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 

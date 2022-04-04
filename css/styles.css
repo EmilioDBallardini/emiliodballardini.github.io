@@ -1,10 +1,156 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
+  --ff-primary: Verdana, sans-serif;
+  --ff-secondary: Arial, monospace;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   --transition-speed: 600ms;
   --pads-color: #000000;
   --central-color: rgb(255, 255, 255);
+
+  --fw-reg: 330;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #1c2cc0a1;
+
+  --fs-h1: 48px;
+  --fs-h2: 36px;
+  --fs-h3: 20px;
+  --fs-body: 16px;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  /* box-shadow */
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --fs-h1: 4.5;
+    --fs-h2: 60px;
+    --fs-h3: 24px;
+    --fs-body: 18px;
+  }
+}
+
+body {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 3em 3em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Typograhy */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.section__title {
+  font-weight: var(--fw-reg);
+}
+
+.section__title-intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title-intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle-intro,
+.section__subtitle-about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+  padding: .25em 2em;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+/* Nav */
+
+nav {
+  display: none;
+}
+
+/* Intro */
+
+.intro {
+  position: relative;
+}
+
+.image__museum {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 37.5rem) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0;
+    grid-template-rows: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .image__museum {
+    grid-area: img;
+    min-width: 15.625rem;
+    position: relative;
+    z-index: -2;
+  }
+
+  .section__subtitle-intro {
+    align-self: start;
+    /* Stops from stretching */
+    grid-column: -1 / 1;
+    /* Stretches the whole section underneath  */
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+  }
 }
 
 .portfolio_body {
@@ -15,7 +161,7 @@
 }
 
 .nav_pad {
-  padding: 1.25rem;
+  padding: 20px;
   background-color: #3d3c3f;
 }
 
@@ -27,13 +173,13 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  padding: 0px 2%;
+  padding: 0rem 2%;
   clear: both;
 }
 
 .nav_links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .nav_links li a {
@@ -45,11 +191,11 @@
 
 .nav_links li a:hover {
   background-color: #0c417e;
-  border-radius: 0.20rem;
+  border-radius: 3.2px;
 }
 
 .nav_links button {
-  padding: 9px 25px;
+  padding: .5625rem 1.5625rem;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -57,7 +203,7 @@
 
 .nav_links button:hover {
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.20rem;
+  border-radius: 3.2px;
 }
 
 .nav_item {
@@ -81,7 +227,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   background-color: var(--pads-color);
 }
 
@@ -90,7 +236,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 1.25rem;
+  padding: 20px;
   background-color: #3d3c3f;
 }
 
@@ -102,13 +248,13 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  padding: 0px 2%;
+  padding: 0rem 2%;
   clear: both;
 }
 
 .foot_links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .foot_links li a {
@@ -120,11 +266,11 @@
 
 .foot_links li a:hover {
   background-color: #0c417e;
-  border-radius: 0.20rem;
+  border-radius: 3.2px;
 }
 
 .foot_links button {
-  padding: 9px 25px;
+  padding: .5625rem 1.5625rem;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -132,7 +278,7 @@
 
 .foot_links button:hover {
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.20rem;
+  border-radius: 3.2px;
 }
 
 .foot_item {
@@ -147,10 +293,10 @@
   margin-right: auto;
 }
 
-.image__bici {
-  width: 200px;
-  height: 220px;
+/* .image__museum {
+  width: 12.5rem;
+  height: 13.75rem;
   object-fit: cover;
-  object-position: -40px 20px;
+  object-position: -2.5rem 1.25rem;
   opacity: 80%;
-}
+} */
