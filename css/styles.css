@@ -4,24 +4,24 @@
   box-sizing: border-box;
 }
 
-* {
+:root {
   --ff-primary: Verdana, sans-serif;
-  --ff-secondary: Arial, monospace;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+  --ff-secondary: 'Roboto slab', serif;
+
   --transition-speed: 600ms;
   --pads-color: #000000;
   --central-color: rgb(255, 255, 255);
 
-  --fw-reg: 330;
-  --fw-bold: 900;
+  --fw-reg: 300;
+  --fw-bold: 700;
 
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #575a7556;
+  --clr-accent-2: #d5e227;
 
-  --fs-h1: 48px;
-  --fs-h2: 36px;
+  --fs-h1: 36px;
+  --fs-h2: 25px;
   --fs-h3: 20px;
   --fs-body: 16px;
 
@@ -30,16 +30,21 @@
   /* box-shadow */
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 800px) {
   :root {
-    --fs-h1: 4.5;
-    --fs-h2: 60px;
-    --fs-h3: 24px;
-    --fs-body: 18px;
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
   }
 }
 
+
 /* General Styles */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--clr-light);
@@ -51,7 +56,7 @@ body {
 }
 
 section {
-  padding: 3em 3em;
+  padding: 5em 2em;
 }
 
 img {
@@ -59,8 +64,12 @@ img {
   max-width: 100%;
 }
 
+strong {
+  font-weight: var(--fw-bold)
+}
+
 :focus {
-  outline: 3px solid var(--clr-accent);
+  outline: 3px solid var(--clr-accent-2);
   outline-offset: 3px;
 }
 
@@ -70,14 +79,16 @@ img {
   display: inline-block;
   padding: .5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-dark);
+  color: var(--clr-accent-2);
   text-decoration: none;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: .9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  margin: auto;
+  align-self: baseline;
 }
 
 .btn:hover {
@@ -106,7 +117,7 @@ h3 {
 }
 
 .section__title {
-  font-weight: var(--fw-reg);
+  margin-bottom: .25em;
 }
 
 .section__title-intro {
@@ -132,14 +143,123 @@ h3 {
   padding: .25em 2em;
 }
 
-strong {
+.section__subtitle-work {
+  color: var(--clr-accent-2);
   font-weight: var(--fw-bold);
+  margin-bottom: 2em;
 }
 
 /* Nav */
 
-nav {
-  display: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent-2);
+}
+
+.nav-toggle {
+  padding: .5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.logo {
+  max-width: 100px;
+
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .chori {
+  transform: rotate(.625turn);
+}
+
+.nav-open .chori::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .chori::after {
+  opacity: 0;
+}
+
+/* Hamburguer */
+
+.chori {
+  display: block;
+  position: relative;
+}
+
+.chori,
+.chori::before,
+.chori::after {
+  background: var(--clr-accent-2);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.chori::before,
+.chori::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.chori::before {
+  top: 6px;
+}
+
+.chori::after {
+  bottom: 6px;
 }
 
 /* Intro */
@@ -152,6 +272,10 @@ nav {
   box-shadow: var(--bs);
   width: 12.5rem;
   height: auto;
+}
+
+.section__subtitle-intro {
+  display: inline-block;
 }
 
 @media (min-width: 37.5rem) {
@@ -190,6 +314,8 @@ nav {
 /* Projects */
 
 .my-projects {
+  display: flex;
+  flex-direction: column;
   background-color: var(--clr-dark);
   background-image: url(../images/computer__stock-3.jpeg);
   background-size: cover;
@@ -217,7 +343,6 @@ nav {
   margin-bottom: 4em;
 }
 
-
 .project {
   max-width: 500px;
   margin: 0 auto;
@@ -226,6 +351,7 @@ nav {
 @media (min-width: 800px) {
   .projects {
     display: flex;
+    flex-direction: row;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -295,12 +421,6 @@ nav {
   text-align: center;
 }
 
-.section__subtitle-work {
-  color: var(--clr-light);
-  font-weight: var(--fw-bold);
-  margin-bottom: 2em;
-}
-
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -312,14 +432,17 @@ nav {
 }
 
 .portfolio__img {
-  transition: 
-  transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
-  opacity 750ms linear;
+  transition:
+    transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+    opacity 750ms linear;
+    height: 100%;
+    width: auto;
+    margin: auto;
 }
 
 .portfolio__item:focus {
-  position:relative;
-  z-index:2;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio__img:hover,
@@ -328,15 +451,67 @@ nav {
   opacity: 0.75;
 }
 
+/* Footer */
 
+.footer {
+  background: #111;
+  color: var(--clr-accent-2);
+  text-align: center;
+  padding: 2.5rem 0;
+  font-size: var(--fs-h3);
+}
 
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
 
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+}
 
-.portfolio_body {
-  background-color: var(--central-color);
-  margin: 0;
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__link {
+  font-weight: var(--fw-bold);
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
   padding: 0;
-  position: relative;
+}
+
+.social-list__item {
+  margin: 0 .5em;
+}
+
+.fab:hover{
+  transform: scale(1.2);
+  transition: transform 300ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.social-list__link {
+  padding: .5em;
+}
+
+/* Portfolio item individual */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav_pad {

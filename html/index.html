@@ -14,27 +14,28 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body class="portfolio_body">
   <div id="container">
 
     <header>
-      <nav class="nav_pad">
-        <ul class="nav_links">
-          <li class="nav_item nav_name"><a>Hi! I'm Emilio Ballardini</a></li>
-          <li class="nav_item"><a href="#home">Home</a></li>
-          <li class="nav_item"><a href="#projects">Project</a></li>
-          <li class="nav_item"><a href="../docs/CV_English.pdf">Check my CV</a></li>
-          <li class="nav_item"><a href="#about" class="nav_name">About</a></li>
-          <li class="nav_item"><a href="#contacts" class="nav_name">Contact</a></li>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="chori"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="../docs/CV_English.pdf">Check my CV</a></li>
+          <li class="nav__item"><a href="#about" class="nav_name nav__link">About me</a></li>
+          <li class="nav__item"><a href="#footer" class="nav_name nav__link">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <button class="nav-toggle" aria-label="toggle navigation bar">
-      <span class="chori"></span>
-    </button>
 
     <!--------------------------------------------------------------------------------------------------------------------->
     <!-- Introduction -->
@@ -43,7 +44,7 @@
         Hi! I'm <strong> Emilio Ballardini </strong>
       </h1>
       <p class="section__subtitle section__subtitle-intro">
-        Fullstack web developer specialized in Ruby On Rails
+        Fullstack web developer specialized in Ruby On Rails and Java
       </p>
       <img src="../images/foto__pared.jpeg" alt="an image of me smiling" class="image__intro">
     </section>
@@ -54,26 +55,21 @@
       <div class="projects">
         <div class="project">
           <h3>Albores</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sed rerum reiciendis tenetur sint at, debitis
-            veritatis et sunt ducimus commodi eum accusantium dolorem laudantium fugit? Minus, placeat illo. Quos.</p>
+          <p>A unique ubiquitous experience through the history of computational science</p>
         </div> <!-- / project -->
 
         <div class="project">
           <h3>Tarde de Barrio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laborum error, at nisi ipsam nam in fugit
-            delectus totam facilis. Quam, provident facilis! Beatae vitae sed nemo necessitatibus iste quas?</p>
+          <p>Keep a track in the educational journey of students at the stages of Kindergarden, Primary & High School</p>
         </div> <!-- / project -->
 
         <div class="project">
           <h3>FixItFelixJr</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aspernatur quo deleniti similique
-            explicabo ipsum provident quidem beatae, sapiente, quasi laudantium libero ad assumenda quas, voluptas in
-            sed ipsa sequi.</p>
+          <p>Help Felix in his quest of keeping the building in one piece, while Ralph will try the opposite</p>
         </div> <!-- / project -->
 
-        <a href="#work" class="btn btn-projects">See more</a>
-
       </div>
+      <a href="#work" class="btn">See more</a>
     </section>
 
     <!-- About me -->
@@ -95,15 +91,15 @@
       <p class="section__subtitle section__subtitle-work"> A collection of projects where i've been involved</p>
 
       <div class="portfolio">
-        <a href="#" class="portfolio__item">
+        <a href="../html/portfolio-item-fixitfelix.html" class="portfolio__item">
           <img src="../images/Fix-It-Felix-Jr.jpg" alt="introduction to the fixitfelix game" class="portfolio__img">
         </a>
 
-        <a href="#" class="portfolio__item">
+        <a href="../html/portfolio-item-albores.html" class="portfolio__item">
           <img src="../images/albores.jpeg" alt="introduction to the albores game" class="portfolio__img">
         </a>
 
-        <a href="#" class="portfolio__item">
+        <a href="../html/portfolio-item-tarde-de-barrio.html" class="portfolio__item">
           <img src="../images/tarde-de-barrio.png" alt="welcome page of tarde de barrio" class="portfolio__img">
         </a>
       </div>
@@ -111,23 +107,23 @@
 
     <!-- Footer -->
 
-    <footer>
+    <footer class="footer" id="footer">
       <a href="mailto:emilio.ballardini@alu.ing.unlp.edu.ar"
         class="footer__link">emilio.ballardini@alu.ing.unlp.edu.ar</a>
 
       <ul class="social-list">
-        <li class="social-list__item"><a class="social-list__link" href="https://github.com/EmilioDBallardini">Github <i
+        <li class="social-list__item"><a class="social-list__link" href="https://github.com/EmilioDBallardini"><i
               class="fab fa-github"></i></a></i></li>
-        <li class="social-list__item"><a class="social-list__link" href="https://gitlab.com/EmilioD">Gitlab <i
+        <li class="social-list__item"><a class="social-list__link" href="https://gitlab.com/EmilioD"><i
               class="fab fa-gitlab"></i></a></li>
         <li class="social-list__item"><a class="social-list__link"
-            href="https://www.linkedin.com/in/emiliodballardini/">Linkedin <i class="fab fa-linkedin"></i></a>
+            href="https://www.linkedin.com/in/emiliodballardini/"><i class="fab fa-linkedin"></i></a>
         </li>
       </ul>
     </footer>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="../js/scripts.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
