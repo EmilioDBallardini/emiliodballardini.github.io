@@ -634,7 +634,7 @@ h3 {
   opacity: 0.75;
 }
 
-.gotopbtn{
+.gotopbtn {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -651,17 +651,17 @@ h3 {
   opacity: 0;
 }
 
-.gotopbtn.active{
+.gotopbtn.active {
   top: calc(100% - 100px);
   opacity: 1;
 }
 
-.gotopbtn:hover{
+.gotopbtn:hover {
   background-color: var(--clr-accent-2);
 }
 
 .gotopbtn::before,
-.gotopbtn::after{
+.gotopbtn::after {
   content: "";
   width: 50px;
   height: 50px;
@@ -672,18 +672,19 @@ h3 {
   box-sizing: border-box;
   animation: waves 2s linear infinite;
 }
-.gotopbtn::after{
+
+.gotopbtn::after {
   animation-delay: 1s;
 }
 
 .gotopbtn:hover::before,
-.gotopbtn:hover::after{
+.gotopbtn:hover::after {
   border-color: var(--clr-accent-2);
 }
 
-@keyframes waves{
-  to{
-      transform: scale(2);
-      opacity: 0;
+@keyframes waves {
+  to {
+    transform: scale(2);
+    opacity: 0;
   }
 }
