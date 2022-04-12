@@ -633,3 +633,57 @@ h3 {
   transform: scale(1.2);
   opacity: 0.75;
 }
+
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: var(--clr-dark);
+  top: -80px;
+  right: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: var(--clr-light);
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .6s ease-out;
+  opacity: 0;
+}
+
+.gotopbtn.active{
+  top: calc(100% - 100px);
+  opacity: 1;
+}
+
+.gotopbtn:hover{
+  background-color: var(--clr-accent-2);
+}
+
+.gotopbtn::before,
+.gotopbtn::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-light);
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  animation: waves 2s linear infinite;
+}
+.gotopbtn::after{
+  animation-delay: 1s;
+}
+
+.gotopbtn:hover::before,
+.gotopbtn:hover::after{
+  border-color: var(--clr-accent-2);
+}
+
+@keyframes waves{
+  to{
+      transform: scale(2);
+      opacity: 0;
+  }
+}

@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
@@ -19,6 +25,9 @@
 </head>
 
 <body class="portfolio_body">
+  <div class="gotopbtn">
+    <i class="fas fa-arrow-up"></i>
+  </div>
   <div id="container">
 
     <header>
@@ -60,7 +69,7 @@
           <i class="mifz-icons icon-raspberrypi" style="color: #c51a4a;"></i>
           <i class="mifz-icons fab fa-java" style="color: yellow;"></i>
           <i class="mifz-icons fab fa-git" style="color: #f1502f;"></i>
-          
+
           <p>A unique ubiquitous experience through the history of computational science</p>
         </div> <!-- / project -->
 
@@ -75,7 +84,8 @@
           <i class="mifz-icons icon-ruby" style="color: red;"></i>
           <i class="mifz-icons icon-postgres-alt" style="color: #0064a5;"></i>
           <i class="mifz-icons icon-heroku" style="color: violet;"></i>
-          <p>Keep a track in the educational journey of students at the stages of Kindergarden, Primary & High School</p>
+          <p>Keep a track in the educational journey of students at the stages of Kindergarden, Primary & High School
+          </p>
         </div> <!-- / project -->
 
         <div class="project">
@@ -143,6 +153,19 @@
 
     <!-- Scripts -->
     <script src="../js/index.js"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 150)
+          $(".gotopbtn").addClass("active");
+        else
+          $(".gotopbtn").removeClass("active");
+      });
+      $(".gotopbtn").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 800);
+      });
+    </script>
 </body>
 
 </html>
