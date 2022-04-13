@@ -1,50 +1,173 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Portfolio.Open("Emilio Ballardini")</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body class="portfolio_body">
-    <div id="container">
-      
-      <div id="header">
-        <nav id="navigation" class="nav_pad">
-          <ul class="nav_links">
-            <li class="nav_item nav_name"><a>Hi! I'm Emilio Ballardini</a></li>
-            <li class="nav_item"><a href="index.html" >Home</a></li>
-            <li class="nav_item"><a href="about.html" >About</a></li>
-            <li class="nav_item"><a href="docs/CV_English.pdf" >Check my CV</a></li>
-            <li class="nav_item"><a href="contact.html" class="nav_name">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta viewport="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <title>Portfolio.Open("Emilio Ballardini")</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <div id="main">
-          <h2>Portfolio</h2>
-          <p>
-            <img src="images/portfolio.jpg" alt="Portfolio" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../icons/font-mfizz-2.4.1/font-mfizz.css">
+</head>
+
+<body class="portfolio_body">
+  <div class="gotopbtn">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <div id="container">
+
+    <header>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="chori"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="../docs/CV_English.pdf" target="_blank">Check my CV</a></li>
+          <li class="nav__item"><a href="#about" class="nav_name nav__link">About me</a></li>
+          <li class="nav__item"><a class="nav__link" href="#work">Work</a></li>
+          <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title-intro">
+        Hi! I'm <strong> Emilio Ballardini </strong>
+      </h1>
+      <p class="section__subtitle section__subtitle-intro">
+        Fullstack web developer specialized in Ruby On Rails and Java
+      </p>
+      <img src="../images/foto__pared.jpeg" alt="an image of me smiling" class="image__intro">
+    </section>
+
+    <!-- My project -->
+    <section class="my-projects" id="projects">
+      <h2 class="section__title section__title-projects"> What i've done </h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Albores</h3>
+          <i class="mifz-icons icon-raspberrypi" style="color: #c51a4a;"></i>
+          <i class="mifz-icons fab fa-java" style="color: yellow;"></i>
+          <i class="mifz-icons fab fa-git" style="color: #f1502f;"></i>
+
+          <p>A unique ubiquitous experience through the history of computational science</p>
+        </div> <!-- / project -->
+
+        <div class="project">
+          <h3>Tarde de Barrio</h3>
+          <i class="mifz-icons fab fa-html5" style="color: orange;"></i>
+          <i class="mifz-icons fab fa-css3" style="color: lightseagreen;"></i>
+          <i class="mifz-icons fab fa-js" style="color: yellow;"></i>
+          <i class="mifz-icons fab fa-git" style="color: #f1502f;"></i>
+          <i class="mifz-icons icon-sass" style="color: pink;"></i>
+          <i class="mifz-icons icon-ruby-on-rails" style="color: red;"></i>
+          <i class="mifz-icons icon-ruby" style="color: red;"></i>
+          <i class="mifz-icons icon-postgres-alt" style="color: #0064a5;"></i>
+          <i class="mifz-icons icon-heroku" style="color: violet;"></i>
+          <p>Keep a track in the educational journey of students at the stages of Kindergarden, Elementary & High School
           </p>
-          <p>
-            <p>
-              Hi! I'm Emilio, also known as Emi, sometimes known as Qudit (kju dit) and you've trasspased into my domains<br>  
-              Make yourself comfortable and enjoy the view
-            </p>
+        </div> <!-- / project -->
 
-          </p>
-        </div>
+        <div class="project">
+          <h3>FixItFelixJr</h3>
+          <i class="mifz-icons fab fa-java" style="color: yellow;"></i>
+          <p>Help Felix in his quest of keeping the building in one piece! While Ralph will try the opposite!</p>
+        </div> <!-- / project -->
+
+      </div>
+      <a href="#work" class="btn">See more</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title-about"> Who i am </h2>
+      <p class="section__subtitle section__subtitle-about"> Software developer based out in La Plata - Argentina -<br>
+        Advanced Computer Engineering student - <br>
+        24 years old - Love videogames and LOTR -<br>
+        Would use my bike just for 2 blocks - Winter team -<br>
+        I find myself to be more pro-active on rainy days -
+      </p>
+
+      <div class="about__body">
+        <p></p>
       </div>
 
-      <div id="footer">
-        <p>
-          <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="docs/CV_English.pdf">CV</a> | <a href="contact.html">Contact</a>
-        </p>
-        <p>
+      <img src="../images/emi__1.jpeg" alt="an image of me smiling i hope" class="about-me__image">
+    </section>
 
-        </p>
+    <!-- Projects -->
+
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title-work">My work</h2>
+      <p class="section__subtitle section__subtitle-work"> A collection of projects where i've been involved</p>
+
+      <div class="portfolio">
+        <a href="../html/portfolio-item-fixitfelix.html" class="portfolio__item">
+          <img src="../images/fix_it.jpg" alt="introduction to the fixitfelix game" class="portfolio__img">
+        </a>
+
+        <a href="../html/portfolio-item-albores.html" class="portfolio__item">
+          <img src="../images/Albores fondo-01.jpg" alt="introduction to the albores game" class="portfolio__img">
+        </a>
+
+        <a href="../html/portfolio-item-tarde-de-barrio.html" class="portfolio__item">
+          <img src="../images/tarde-de-barrio_crop.png" alt="welcome page of tarde de barrio" class="portfolio__img">
+        </a>
       </div>
-    </div>
+    </section>
 
-    <script type="text/javascript" src="javascript/"></script>
-  </body>
+    <!-- Footer -->
+
+    <footer class="footer" id="footer">
+      <a href="mailto:emilio.ballardini@alu.ing.unlp.edu.ar"
+        class="footer__link">emilio.ballardini@alu.ing.unlp.edu.ar</a>
+
+      <ul class="social-list">
+        <li class="social-list__item"><a class="social-list__link" target="_blank"
+            href="https://github.com/EmilioDBallardini"><i class="fab fa-github"></i></a></i></li>
+        <li class="social-list__item"><a class="social-list__link" target="_blank" href="https://gitlab.com/EmilioD"><i
+              class="fab fa-gitlab"></i></a></li>
+        <li class="social-list__item"><a class="social-list__link" target="_blank"
+            href="https://www.linkedin.com/in/emiliodballardini/"><i class="fab fa-linkedin"></i></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/index.js"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 150)
+          $(".gotopbtn").addClass("active");
+        else
+          $(".gotopbtn").removeClass("active");
+      });
+      $(".gotopbtn").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 800);
+      });
+    </script>
+</body>
 
 </html>
