@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta viewport="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <title>Portfolio.Open("Emilio Ballardini")</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
@@ -16,15 +16,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="icons/font-mfizz-2.4.1/font-mfizz.css">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../icons/font-mfizz-2.4.1/font-mfizz.css">
 </head>
 
-<body class="portfolio_body">
+<body>
   <div class="gotopbtn">
     <i class="fas fa-arrow-up"></i>
   </div>
@@ -39,7 +39,7 @@
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
           <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
-          <li class="nav__item"><a class="nav__link" href="../docs/CV_English.pdf" target="_blank">Check my CV</a></li>
+          <li class="nav__item"><a class="nav__link" href="docs/CV_English.pdf" target="_blank">Check my CV</a></li>
           <li class="nav__item"><a href="#about" class="nav_name nav__link">About me</a></li>
           <li class="nav__item"><a class="nav__link" href="#work">Work</a></li>
           <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
@@ -57,12 +57,12 @@
       <p class="section__subtitle section__subtitle-intro">
         Fullstack web developer specialized in Ruby On Rails and Java
       </p>
-      <img src="../images/foto__pared.jpeg" alt="an image of me smiling" class="image__intro">
+      <img src="images/foto__pared.jpeg" alt="an image of me smiling" class="image__intro">
     </section>
 
     <!-- My project -->
     <section class="my-projects" id="projects">
-      <h2 class="section__title section__title-projects"> What i've done </h2>
+      <h2 class="section__title section__title-projects"> What I've done </h2>
       <div class="projects">
         <div class="project">
           <h3>Albores</h3>
@@ -100,19 +100,19 @@
 
     <!-- About me -->
     <section class="about-me" id="about">
-      <h2 class="section__title section__title-about"> Who i am </h2>
-      <p class="section__subtitle section__subtitle-about"> Software developer based out in La Plata - Argentina -<br>
-        Advanced Computer Engineering student - <br>
-        24 years old - Love videogames and LOTR -<br>
-        Would use my bike just for 2 blocks - Winter team -<br>
-        I find myself to be more pro-active on rainy days -
-      </p>
+      <h2 class="section__title section__title-about"> Who I am </h2>
+      <p class="section__subtitle section__subtitle-about"> Software developer based in La Plata - Argentina -<br></p>
 
       <div class="about__body">
-        <p></p>
+        <p>
+          Advanced Computer Engineering student -<br>
+          24 years old - Love videogames and LOTR<br>
+        </p>
+        <p>Would use my bike just for 2 blocks - Winter team -
+        I find myself to be more pro-active on rainy days</p>
       </div>
 
-      <img src="../images/emi__1.jpeg" alt="an image of me smiling i hope" class="about-me__image">
+      <img src="images/emi__1.jpeg" alt="an image of me smiling i hope" class="about-me__image">
     </section>
 
     <!-- Projects -->
@@ -122,16 +122,16 @@
       <p class="section__subtitle section__subtitle-work"> A collection of projects where i've been involved</p>
 
       <div class="portfolio">
-        <a href="../html/portfolio-item-fixitfelix.html" class="portfolio__item">
-          <img src="../images/fix_it.jpg" alt="introduction to the fixitfelix game" class="portfolio__img">
+        <a href="portfolio-item-fixitfelix.html" class="portfolio__item">
+          <img src="images/fix_it.jpg" alt="introduction to the fixitfelix game" class="portfolio__img">
         </a>
 
-        <a href="../html/portfolio-item-albores.html" class="portfolio__item">
-          <img src="../images/Albores fondo-01.jpg" alt="introduction to the albores game" class="portfolio__img">
+        <a href="portfolio-item-albores.html" class="portfolio__item">
+          <img src="images/Albores fondo-01.jpg" alt="introduction to the albores game" class="portfolio__img">
         </a>
 
-        <a href="../html/portfolio-item-tarde-de-barrio.html" class="portfolio__item">
-          <img src="../images/tarde-de-barrio_crop.png" alt="welcome page of tarde de barrio" class="portfolio__img">
+        <a href="portfolio-item-tarde-de-barrio.html" class="portfolio__item">
+          <img src="images/tarde-de-barrio_crop.png" alt="welcome page of tarde de barrio" class="portfolio__img">
         </a>
       </div>
     </section>
@@ -154,7 +154,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/index.js"></script>
+    <script src="js/index.js"></script>
     <script>
       $(window).scroll(function () {
         if ($(this).scrollTop() > 150)
@@ -165,7 +165,7 @@
       $(".gotopbtn").click(function () {
         $("html, body").animate({
           scrollTop: 0
-        }, 800);
+        }, 350);
       });
     </script>
 </body>
